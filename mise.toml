@@ -1,0 +1,4 @@
+[tools]
+# supports everything you can do with .tool-versions currently
+node = ['16.14.2']
+
