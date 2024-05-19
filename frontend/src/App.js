@@ -116,7 +116,6 @@ function App() {
   useEffect(() => {
     if (!selectedSong) return;
     if (preferredReadSpeed < MIN_READ_SPEED || preferredReadSpeed > MAX_READ_SPEED) return;
-    console.log('SONG', selectedSong, 'PREFERRED READ SPEED', preferredReadSpeed);
     updateHash('song', selectedSong.label);
     updateHash('readSpeed', preferredReadSpeed);
     fetch(`/api/v1/simfiles/` + encodeURIComponent(selectedSong.label) + `?style=Single&difficulty=Hard&preferred_rate=` + preferredReadSpeed + `&speed_change_threshold=4`)
